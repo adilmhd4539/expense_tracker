@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() {
+import 'core/handlers/db/db_services.dart';
+
+void main() async {
+  await DbServices.initializeDb();
   runApp(const MyApp());
 }
 

@@ -20,16 +20,18 @@ ExpenseModel _$ExpenseModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ExpenseModel {
-  @HiveField(0)
+  @JsonKey(name: "id")
+  int get id => throw _privateConstructorUsedError;
   @JsonKey(name: "amount")
   double get amount => throw _privateConstructorUsedError;
-  @HiveField(1)
-  @JsonKey(name: "category")
-  CategoryModel get category => throw _privateConstructorUsedError;
-  @HiveField(2)
+  @JsonKey(name: "id_category ")
+  int get idCategory => throw _privateConstructorUsedError;
+  @JsonKey(name: "category_name")
+  String get categoryName => throw _privateConstructorUsedError;
+  @JsonKey(name: "category_type")
+  CategoryType get categoryType => throw _privateConstructorUsedError;
   @JsonKey(name: "notes")
   String get notes => throw _privateConstructorUsedError;
-  @HiveField(3)
   @JsonKey(name: "date")
   DateTime get date => throw _privateConstructorUsedError;
 
@@ -46,12 +48,13 @@ abstract class $ExpenseModelCopyWith<$Res> {
       _$ExpenseModelCopyWithImpl<$Res, ExpenseModel>;
   @useResult
   $Res call(
-      {@HiveField(0) @JsonKey(name: "amount") double amount,
-      @HiveField(1) @JsonKey(name: "category") CategoryModel category,
-      @HiveField(2) @JsonKey(name: "notes") String notes,
-      @HiveField(3) @JsonKey(name: "date") DateTime date});
-
-  $CategoryModelCopyWith<$Res> get category;
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "amount") double amount,
+      @JsonKey(name: "id_category ") int idCategory,
+      @JsonKey(name: "category_name") String categoryName,
+      @JsonKey(name: "category_type") CategoryType categoryType,
+      @JsonKey(name: "notes") String notes,
+      @JsonKey(name: "date") DateTime date});
 }
 
 /// @nodoc
@@ -67,20 +70,35 @@ class _$ExpenseModelCopyWithImpl<$Res, $Val extends ExpenseModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? amount = null,
-    Object? category = null,
+    Object? idCategory = null,
+    Object? categoryName = null,
+    Object? categoryType = null,
     Object? notes = null,
     Object? date = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as CategoryModel,
+      idCategory: null == idCategory
+          ? _value.idCategory
+          : idCategory // ignore: cast_nullable_to_non_nullable
+              as int,
+      categoryName: null == categoryName
+          ? _value.categoryName
+          : categoryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      categoryType: null == categoryType
+          ? _value.categoryType
+          : categoryType // ignore: cast_nullable_to_non_nullable
+              as CategoryType,
       notes: null == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
@@ -90,14 +108,6 @@ class _$ExpenseModelCopyWithImpl<$Res, $Val extends ExpenseModel>
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CategoryModelCopyWith<$Res> get category {
-    return $CategoryModelCopyWith<$Res>(_value.category, (value) {
-      return _then(_value.copyWith(category: value) as $Val);
-    });
   }
 }
 
@@ -110,13 +120,13 @@ abstract class _$$ExpenseModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@HiveField(0) @JsonKey(name: "amount") double amount,
-      @HiveField(1) @JsonKey(name: "category") CategoryModel category,
-      @HiveField(2) @JsonKey(name: "notes") String notes,
-      @HiveField(3) @JsonKey(name: "date") DateTime date});
-
-  @override
-  $CategoryModelCopyWith<$Res> get category;
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "amount") double amount,
+      @JsonKey(name: "id_category ") int idCategory,
+      @JsonKey(name: "category_name") String categoryName,
+      @JsonKey(name: "category_type") CategoryType categoryType,
+      @JsonKey(name: "notes") String notes,
+      @JsonKey(name: "date") DateTime date});
 }
 
 /// @nodoc
@@ -130,20 +140,35 @@ class __$$ExpenseModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? amount = null,
-    Object? category = null,
+    Object? idCategory = null,
+    Object? categoryName = null,
+    Object? categoryType = null,
     Object? notes = null,
     Object? date = null,
   }) {
     return _then(_$ExpenseModelImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as CategoryModel,
+      idCategory: null == idCategory
+          ? _value.idCategory
+          : idCategory // ignore: cast_nullable_to_non_nullable
+              as int,
+      categoryName: null == categoryName
+          ? _value.categoryName
+          : categoryName // ignore: cast_nullable_to_non_nullable
+              as String,
+      categoryType: null == categoryType
+          ? _value.categoryType
+          : categoryType // ignore: cast_nullable_to_non_nullable
+              as CategoryType,
       notes: null == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
@@ -160,34 +185,42 @@ class __$$ExpenseModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ExpenseModelImpl implements _ExpenseModel {
   const _$ExpenseModelImpl(
-      {@HiveField(0) @JsonKey(name: "amount") required this.amount,
-      @HiveField(1) @JsonKey(name: "category") required this.category,
-      @HiveField(2) @JsonKey(name: "notes") required this.notes,
-      @HiveField(3) @JsonKey(name: "date") required this.date});
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "amount") required this.amount,
+      @JsonKey(name: "id_category ") required this.idCategory,
+      @JsonKey(name: "category_name") required this.categoryName,
+      @JsonKey(name: "category_type") required this.categoryType,
+      @JsonKey(name: "notes") required this.notes,
+      @JsonKey(name: "date") required this.date});
 
   factory _$ExpenseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ExpenseModelImplFromJson(json);
 
   @override
-  @HiveField(0)
+  @JsonKey(name: "id")
+  final int id;
+  @override
   @JsonKey(name: "amount")
   final double amount;
   @override
-  @HiveField(1)
-  @JsonKey(name: "category")
-  final CategoryModel category;
+  @JsonKey(name: "id_category ")
+  final int idCategory;
   @override
-  @HiveField(2)
+  @JsonKey(name: "category_name")
+  final String categoryName;
+  @override
+  @JsonKey(name: "category_type")
+  final CategoryType categoryType;
+  @override
   @JsonKey(name: "notes")
   final String notes;
   @override
-  @HiveField(3)
   @JsonKey(name: "date")
   final DateTime date;
 
   @override
   String toString() {
-    return 'ExpenseModel(amount: $amount, category: $category, notes: $notes, date: $date)';
+    return 'ExpenseModel(id: $id, amount: $amount, idCategory: $idCategory, categoryName: $categoryName, categoryType: $categoryType, notes: $notes, date: $date)';
   }
 
   @override
@@ -195,16 +228,22 @@ class _$ExpenseModelImpl implements _ExpenseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ExpenseModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.amount, amount) || other.amount == amount) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
+            (identical(other.idCategory, idCategory) ||
+                other.idCategory == idCategory) &&
+            (identical(other.categoryName, categoryName) ||
+                other.categoryName == categoryName) &&
+            (identical(other.categoryType, categoryType) ||
+                other.categoryType == categoryType) &&
             (identical(other.notes, notes) || other.notes == notes) &&
             (identical(other.date, date) || other.date == date));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, amount, category, notes, date);
+  int get hashCode => Object.hash(runtimeType, id, amount, idCategory,
+      categoryName, categoryType, notes, date);
 
   @JsonKey(ignore: true)
   @override
@@ -222,31 +261,37 @@ class _$ExpenseModelImpl implements _ExpenseModel {
 
 abstract class _ExpenseModel implements ExpenseModel {
   const factory _ExpenseModel(
-          {@HiveField(0) @JsonKey(name: "amount") required final double amount,
-          @HiveField(1)
-          @JsonKey(name: "category")
-          required final CategoryModel category,
-          @HiveField(2) @JsonKey(name: "notes") required final String notes,
-          @HiveField(3) @JsonKey(name: "date") required final DateTime date}) =
-      _$ExpenseModelImpl;
+      {@JsonKey(name: "id") required final int id,
+      @JsonKey(name: "amount") required final double amount,
+      @JsonKey(name: "id_category ") required final int idCategory,
+      @JsonKey(name: "category_name") required final String categoryName,
+      @JsonKey(name: "category_type") required final CategoryType categoryType,
+      @JsonKey(name: "notes") required final String notes,
+      @JsonKey(name: "date")
+      required final DateTime date}) = _$ExpenseModelImpl;
 
   factory _ExpenseModel.fromJson(Map<String, dynamic> json) =
       _$ExpenseModelImpl.fromJson;
 
   @override
-  @HiveField(0)
+  @JsonKey(name: "id")
+  int get id;
+  @override
   @JsonKey(name: "amount")
   double get amount;
   @override
-  @HiveField(1)
-  @JsonKey(name: "category")
-  CategoryModel get category;
+  @JsonKey(name: "id_category ")
+  int get idCategory;
   @override
-  @HiveField(2)
+  @JsonKey(name: "category_name")
+  String get categoryName;
+  @override
+  @JsonKey(name: "category_type")
+  CategoryType get categoryType;
+  @override
   @JsonKey(name: "notes")
   String get notes;
   @override
-  @HiveField(3)
   @JsonKey(name: "date")
   DateTime get date;
   @override
