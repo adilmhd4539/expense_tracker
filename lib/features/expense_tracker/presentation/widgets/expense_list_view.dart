@@ -92,7 +92,7 @@ class ExpenseListView extends StatelessWidget {
                         )),
                     const Spacer(),
                     Text(
-                      '${expense.amount}',
+                      '\$${expense.amount}',
                       style: AppTextStyles.extralargeBold.copyWith(
                         color:
                             expense.category.categoryType == CategoryType.income
