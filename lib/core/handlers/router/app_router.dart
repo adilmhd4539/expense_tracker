@@ -6,6 +6,7 @@ import '../../../features/expense_tracker/presentation/screens/add_expense_trake
 import '../../../features/expense_tracker/presentation/screens/dash_board_screen.dart';
 import '../../../features/expense_tracker/presentation/screens/home_screen.dart';
 import '../../../features/expense_tracker/presentation/screens/main_screen.dart';
+import '../../../features/settings/presentation/screens/settings_screen.dart';
 part 'app_router.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
@@ -26,6 +27,7 @@ class AppRouter extends _$AppRouter {
               page: DashBoardRoute.page,
               maintainState: false,
             ),
+            AutoRoute(page: SettingsRoute.page, maintainState: false)
           ],
         ),
         AutoRoute(

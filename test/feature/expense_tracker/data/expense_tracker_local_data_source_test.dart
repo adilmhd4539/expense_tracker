@@ -3,7 +3,6 @@ import 'package:expense_tracker/features/expense_tracker/data/data_source/expens
 import 'package:expense_tracker/features/expense_tracker/data/models/add_expense_param_model.dart';
 import 'package:expense_tracker/features/expense_tracker/data/models/category_model.dart';
 import 'package:expense_tracker/features/expense_tracker/data/models/expense_model.dart';
-import 'package:expense_tracker/features/expense_tracker/presentation/bloc/expense_tracker_event.dart';
 import 'package:expense_tracker/resorses/enums.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';

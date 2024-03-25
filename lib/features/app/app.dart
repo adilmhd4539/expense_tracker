@@ -2,6 +2,8 @@ import 'package:expense_tracker/core/handlers/di/service_locator.dart';
 import 'package:expense_tracker/core/handlers/router/app_router.dart';
 import 'package:expense_tracker/features/expense_tracker/domain/usecases/expense_tracker_use_case.dart';
 import 'package:expense_tracker/features/expense_tracker/presentation/bloc/expense_tracker_bloc.dart';
+import 'package:expense_tracker/features/settings/domain/usecases/settings_usecase.dart';
+import 'package:expense_tracker/features/settings/presentation/bloc/settings_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,7 +19,10 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => ExpenseTrackerBloc(
               getIt<ExpenseTrackerUsecase>(), getIt<AppRouter>()),
-        )
+        ),
+        BlocProvider(
+            create: (_) =>
+                SettingsBloc(getIt<SettingsUsecase>(), getIt<AppRouter>()))
       ],
       child: MaterialApp.router(
         routerConfig: getIt<AppRouter>().config(),

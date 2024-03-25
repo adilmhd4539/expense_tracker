@@ -20,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter(
-        routes: const [HomeRoute(), DashBoardRoute()],
+        routes: const [HomeRoute(), DashBoardRoute(), SettingsRoute()],
         builder: (context, child) {
           TabsRouter tabRouter = AutoTabsRouter.of(context);
           return Scaffold(
@@ -41,7 +41,9 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.dashboard), label: 'Graph')
+                    icon: Icon(Icons.dashboard), label: 'Graph'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.settings), label: 'Settings')
               ],
             ),
           );

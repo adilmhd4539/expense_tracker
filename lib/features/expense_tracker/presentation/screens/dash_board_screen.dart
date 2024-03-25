@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:expense_tracker/core/failure/failure.dart';
 import 'package:expense_tracker/features/expense_tracker/domain/entities/category_entity.dart';
