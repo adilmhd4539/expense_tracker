@@ -24,7 +24,7 @@ mixin _$ExpenseModel {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: "amount")
   double get amount => throw _privateConstructorUsedError;
-  @JsonKey(name: "id_category ")
+  @JsonKey(name: "category_id")
   int get idCategory => throw _privateConstructorUsedError;
   @JsonKey(name: "category_name")
   String get categoryName => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ abstract class $ExpenseModelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: "id") int id,
       @JsonKey(name: "amount") double amount,
-      @JsonKey(name: "id_category ") int idCategory,
+      @JsonKey(name: "category_id") int idCategory,
       @JsonKey(name: "category_name") String categoryName,
       @JsonKey(name: "category_type") CategoryType categoryType,
       @JsonKey(name: "notes") String notes,
@@ -122,7 +122,7 @@ abstract class _$$ExpenseModelImplCopyWith<$Res>
   $Res call(
       {@JsonKey(name: "id") int id,
       @JsonKey(name: "amount") double amount,
-      @JsonKey(name: "id_category ") int idCategory,
+      @JsonKey(name: "category_id") int idCategory,
       @JsonKey(name: "category_name") String categoryName,
       @JsonKey(name: "category_type") CategoryType categoryType,
       @JsonKey(name: "notes") String notes,
@@ -187,7 +187,7 @@ class _$ExpenseModelImpl implements _ExpenseModel {
   const _$ExpenseModelImpl(
       {@JsonKey(name: "id") required this.id,
       @JsonKey(name: "amount") required this.amount,
-      @JsonKey(name: "id_category ") required this.idCategory,
+      @JsonKey(name: "category_id") required this.idCategory,
       @JsonKey(name: "category_name") required this.categoryName,
       @JsonKey(name: "category_type") required this.categoryType,
       @JsonKey(name: "notes") required this.notes,
@@ -203,7 +203,7 @@ class _$ExpenseModelImpl implements _ExpenseModel {
   @JsonKey(name: "amount")
   final double amount;
   @override
-  @JsonKey(name: "id_category ")
+  @JsonKey(name: "category_id")
   final int idCategory;
   @override
   @JsonKey(name: "category_name")
@@ -263,7 +263,7 @@ abstract class _ExpenseModel implements ExpenseModel {
   const factory _ExpenseModel(
       {@JsonKey(name: "id") required final int id,
       @JsonKey(name: "amount") required final double amount,
-      @JsonKey(name: "id_category ") required final int idCategory,
+      @JsonKey(name: "category_id") required final int idCategory,
       @JsonKey(name: "category_name") required final String categoryName,
       @JsonKey(name: "category_type") required final CategoryType categoryType,
       @JsonKey(name: "notes") required final String notes,
@@ -280,7 +280,7 @@ abstract class _ExpenseModel implements ExpenseModel {
   @JsonKey(name: "amount")
   double get amount;
   @override
-  @JsonKey(name: "id_category ")
+  @JsonKey(name: "category_id")
   int get idCategory;
   @override
   @JsonKey(name: "category_name")

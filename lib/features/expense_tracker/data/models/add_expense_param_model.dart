@@ -8,9 +8,9 @@ part 'generated/add_expense_param_model.g.dart';
 class AddExpenseParamModel with _$AddExpenseParamModel {
   const factory AddExpenseParamModel({
     @JsonKey(name: "amount") required double amount,
-    @JsonKey(name: "id_category") required int idCategory,
+    @JsonKey(name: "category_id") required int idCategory,
     @JsonKey(name: "notes") required String notes,
-    @JsonKey(name: "date") required DateTime date,
+    @JsonKey(name: "date") required String date,
   }) = _AddExpenseParamModel;
 
   factory AddExpenseParamModel.fromJson(Map<String, dynamic> json) =>

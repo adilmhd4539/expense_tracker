@@ -11,7 +11,7 @@ class ExpenseModel with _$ExpenseModel {
   const factory ExpenseModel(
       {@JsonKey(name: "id") required int id,
       @JsonKey(name: "amount") required double amount,
-      @JsonKey(name: "id_category ") required int idCategory,
+      @JsonKey(name: "category_id") required int idCategory,
       @JsonKey(name: "category_name") required String categoryName,
       @JsonKey(name: "category_type") required CategoryType categoryType,
       @JsonKey(name: "notes") required String notes,

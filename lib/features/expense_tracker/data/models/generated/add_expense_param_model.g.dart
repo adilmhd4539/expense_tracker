@@ -10,16 +10,16 @@ _$AddExpenseParamModelImpl _$$AddExpenseParamModelImplFromJson(
         Map<String, dynamic> json) =>
     _$AddExpenseParamModelImpl(
       amount: (json['amount'] as num).toDouble(),
-      idCategory: json['id_category'] as int,
+      idCategory: json['category_id'] as int,
       notes: json['notes'] as String,
-      date: DateTime.parse(json['date'] as String),
+      date: json['date'] as String,
     );
 
 Map<String, dynamic> _$$AddExpenseParamModelImplToJson(
         _$AddExpenseParamModelImpl instance) =>
     <String, dynamic>{
       'amount': instance.amount,
-      'id_category': instance.idCategory,
+      'category_id': instance.idCategory,
       'notes': instance.notes,
-      'date': instance.date.toIso8601String(),
+      'date': instance.date,
     };

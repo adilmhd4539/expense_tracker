@@ -1,31 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../expense_model.dart';
+part of '../category_entity.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ExpenseModelImpl _$$ExpenseModelImplFromJson(Map<String, dynamic> json) =>
-    _$ExpenseModelImpl(
-      id: json['id'] as int,
-      amount: (json['amount'] as num).toDouble(),
-      idCategory: json['category_id'] as int,
+_$CategoryImpl _$$CategoryImplFromJson(Map<String, dynamic> json) =>
+    _$CategoryImpl(
+      categoryId: json['category_id'] as int,
       categoryName: json['category_name'] as String,
       categoryType: $enumDecode(_$CategoryTypeEnumMap, json['category_type']),
-      notes: json['notes'] as String,
-      date: DateTime.parse(json['date'] as String),
+      totalAmount: (json['total_amount'] as num?)?.toDouble() ?? 0,
     );
 
-Map<String, dynamic> _$$ExpenseModelImplToJson(_$ExpenseModelImpl instance) =>
+Map<String, dynamic> _$$CategoryImplToJson(_$CategoryImpl instance) =>
     <String, dynamic>{
-      'id': instance.id,
-      'amount': instance.amount,
-      'category_id': instance.idCategory,
+      'category_id': instance.categoryId,
       'category_name': instance.categoryName,
       'category_type': _$CategoryTypeEnumMap[instance.categoryType]!,
-      'notes': instance.notes,
-      'date': instance.date.toIso8601String(),
+      'total_amount': instance.totalAmount,
     };
 
 const _$CategoryTypeEnumMap = {

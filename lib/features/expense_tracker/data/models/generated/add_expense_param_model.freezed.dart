@@ -22,12 +22,12 @@ AddExpenseParamModel _$AddExpenseParamModelFromJson(Map<String, dynamic> json) {
 mixin _$AddExpenseParamModel {
   @JsonKey(name: "amount")
   double get amount => throw _privateConstructorUsedError;
-  @JsonKey(name: "id_category")
+  @JsonKey(name: "category_id")
   int get idCategory => throw _privateConstructorUsedError;
   @JsonKey(name: "notes")
   String get notes => throw _privateConstructorUsedError;
   @JsonKey(name: "date")
-  DateTime get date => throw _privateConstructorUsedError;
+  String get date => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,9 +43,9 @@ abstract class $AddExpenseParamModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: "amount") double amount,
-      @JsonKey(name: "id_category") int idCategory,
+      @JsonKey(name: "category_id") int idCategory,
       @JsonKey(name: "notes") String notes,
-      @JsonKey(name: "date") DateTime date});
+      @JsonKey(name: "date") String date});
 }
 
 /// @nodoc
@@ -83,7 +83,7 @@ class _$AddExpenseParamModelCopyWithImpl<$Res,
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
     ) as $Val);
   }
 }
@@ -98,9 +98,9 @@ abstract class _$$AddExpenseParamModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: "amount") double amount,
-      @JsonKey(name: "id_category") int idCategory,
+      @JsonKey(name: "category_id") int idCategory,
       @JsonKey(name: "notes") String notes,
-      @JsonKey(name: "date") DateTime date});
+      @JsonKey(name: "date") String date});
 }
 
 /// @nodoc
@@ -135,7 +135,7 @@ class __$$AddExpenseParamModelImplCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as String,
     ));
   }
 }
@@ -145,7 +145,7 @@ class __$$AddExpenseParamModelImplCopyWithImpl<$Res>
 class _$AddExpenseParamModelImpl implements _AddExpenseParamModel {
   const _$AddExpenseParamModelImpl(
       {@JsonKey(name: "amount") required this.amount,
-      @JsonKey(name: "id_category") required this.idCategory,
+      @JsonKey(name: "category_id") required this.idCategory,
       @JsonKey(name: "notes") required this.notes,
       @JsonKey(name: "date") required this.date});
 
@@ -156,14 +156,14 @@ class _$AddExpenseParamModelImpl implements _AddExpenseParamModel {
   @JsonKey(name: "amount")
   final double amount;
   @override
-  @JsonKey(name: "id_category")
+  @JsonKey(name: "category_id")
   final int idCategory;
   @override
   @JsonKey(name: "notes")
   final String notes;
   @override
   @JsonKey(name: "date")
-  final DateTime date;
+  final String date;
 
   @override
   String toString() {
@@ -205,9 +205,9 @@ class _$AddExpenseParamModelImpl implements _AddExpenseParamModel {
 abstract class _AddExpenseParamModel implements AddExpenseParamModel {
   const factory _AddExpenseParamModel(
           {@JsonKey(name: "amount") required final double amount,
-          @JsonKey(name: "id_category") required final int idCategory,
+          @JsonKey(name: "category_id") required final int idCategory,
           @JsonKey(name: "notes") required final String notes,
-          @JsonKey(name: "date") required final DateTime date}) =
+          @JsonKey(name: "date") required final String date}) =
       _$AddExpenseParamModelImpl;
 
   factory _AddExpenseParamModel.fromJson(Map<String, dynamic> json) =
@@ -217,14 +217,14 @@ abstract class _AddExpenseParamModel implements AddExpenseParamModel {
   @JsonKey(name: "amount")
   double get amount;
   @override
-  @JsonKey(name: "id_category")
+  @JsonKey(name: "category_id")
   int get idCategory;
   @override
   @JsonKey(name: "notes")
   String get notes;
   @override
   @JsonKey(name: "date")
-  DateTime get date;
+  String get date;
   @override
   @JsonKey(ignore: true)
   _$$AddExpenseParamModelImplCopyWith<_$AddExpenseParamModelImpl>
